@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>The gMAD Competition Methodology</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container scrollspy" id="home">
+
+      <h4 class="header center black-text"> Adaptive Quantile Low-Rank Matrix Factorization </h4>
+
+      <br>
+
+      <div class="row center">
+        <h5 class="header col s3">
+          <div class="author"><a href="https://xsxjtu.github.io/" target="blank">Shuang Xu</a></div>
+          <div class="school"><a href="http://en.xjtu.edu.cn/" target="blank">University of Xi'an Jiaotong University</a></div>
+        </h5>
+        <h5 class="header col s3">
+          <div class="author"><a href="http://gr.xjtu.edu.cn/web/cxzhang" target="blank">Chunxia Zhang</a></div>
+          <div class="school"><a href="http://en.xjtu.edu.cn/" target="blank">University of Xi'an Jiaotong University</a></div>
+        </h5>
+        <h5 class="header col s3">
+          <div class="author"><a href="http://gr.xjtu.edu.cn/web/jszhang" target="blank">Jiangshe Zhang</a></div>
+          <div class="school"><a href="http://en.xjtu.edu.cn/" target="blank">University of Xi'an Jiaotong University</a></div>
+        </h5>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="row section scrollspy" id="abstract">
+      <div class="title">Abstract</div>
+      <p align="justify">Low-rank matrix factorization (LRMF) has received much popularity owing to its successful applications in both computer vision and data mining. By assuming the noise to come from a Gaussian, Laplace or mixture of Gaussian distributions, significant efforts have been made on optimizing the (weighted) $L_1$ or $L_2$-norm loss between an observed matrix and its bilinear factorization. However, the type of noise distribution is generally unknown in real applications and inappropriate assumptions will inevitably deteriorate the behavior of LRMF. On the other hand, real data are often corrupted by skew rather than symmetric noise. To tackle this problem, this paper presents a novel LRMF model called AQ-LRMF by modeling noise with a mixture of asymmetric Laplace distributions. An efficient algorithm based on the expectation-maximization (EM) algorithm is also offered to estimate the parameters involved in AQ-LRMF. The AQ-LRMF model possesses the advantage that it can approximate noise well no matter whether the real noise is symmetric or skew. The core idea of AQ-LRMF lies in solving a weighted $L_1$ problem with weights being learned from data. The experiments conducted on synthetic and real datasets show that AQ-LRMF outperforms several state-of-the-art techniques. Furthermore, AQ-LRMF also has the superiority over the other algorithms that it can capture local structural information contained in real images.</p>
+    </div>
+
+    <!--<div class="row section scrollspy" id="paper">
+      <div class="title">Paper</div>
+        <div class="col s12">
+          <img src="images/icon_pdf.png"> <a href="   url           " target="_blank">CVPR 2016 paper</a>
+        </div>
+    </div>-->
+
+		<div class="col s3 center">
+          <a href="     " target="_blank">
+            <img src="images/ZIP.png">
+          </a>
+          <br>
+          <a href="     " target="_blank">Waterloo Exploration Database</a>
+        </div>
+        <div class="col s3 center">
+          <a href="     " target="_blank">
+            <img src="images/ZIP.png">
+          </a>
+          <br>
+          <a href="     " target="_blank">Toolbox for IQA</a>
+        </div>
+       </div>
+
+	  
+	  <div class="section row scrollspy" id="bib">
+      <div class="title">Bibtex</div>
+              <pre>@article{xu2020adpative,
+  author    = {Xu, Shuang and Zhang, Chunxia and Zhang, Jiangshe}, 
+  title     = {Adaptive Quantile Low-Rank Matrix Factorization}, 
+  journal   = {,
+  volume    = {},
+  number    = {},
+  pages     = {},
+  year      = {},
+  month     = {}}
+              </pre>
+
+    </div>
+
+
+
+
+	<div class="row center">
+	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=56cfnbg8c95&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+	</div>
+  <footer class="page-footer white">
+    <div class="footer-copyright center black-text">
+      Copyright &#169; 2018
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
