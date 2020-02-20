@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variational Bayesian Reconstruction</title>
+<link rel="Shortcut Icon" href="img/logo-xjtu.png" type="image/x-icon" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="css/styles-merged.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+
+<!--[if lt IE 9]>
+  <script src="js/vendor/html5shiv.min.js"></script>
+  <script src="js/vendor/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default probootstrap-navbar">
+  <div class="container">
+          <div class="navbar-header">
+
+            <a href="index.html" class="navbar-brand"><img src="img/logo.png" height="40" width="150" alt=""></a>
+          </div>
+
+	<div id="navbar-collapse" class="navbar-collapse collapse">
+	  <ul class="nav navbar-nav navbar-right">
+		<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+		<li><a href="#" data-nav-section="features">Features</a></li>
+		<li><a href="#" data-nav-section="pricing">Citation</a></li>
+
+	  </ul>
+	</div>
+  </div>
+</nav>
+
+<section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="container">
+	<div class="row intro-text">
+	  <div class="col-md-8 col-md-offset-2 text-center">
+		<h1 class="probootstrap-heading probootstrap-animate">Variational Bayesian Weighted Network Reconstruction</h1>
+		<div class="probootstrap-subheading center">
+		  <p class="probootstrap-animate">
+			<a href="#" target="_blank" role="button" class="btn btn-primary">Arxiv</a>
+			<a href="#features" class="btn btn-default smoothscroll" role="button">Toolbox (VBR)</a>
+			<a href="#features" class="btn btn-default smoothscroll" role="button">Citation</a>
+			</p>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<section class="probootstrap-section">
+  <div class="container">
+	<div class="row">
+	  
+	  <div class="col-md-6">
+		<div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+		  <span class="icon icon-wallet2"></span>
+		  <h2>Lasso (a.k.a., Compressed Sensing)</h2>
+		  <p>\(\min |y-Xw|_2^2+\lambda_{lasso}|w|_1\)</p>
+		  <ul class="probootstrap-list">
+		  <li class="probootstrap-check">Sparsity is derived from \(L_1\) norm penalty!</li>
+		  <li class="probootstrap-check">Lasso has to fine-tune \(\lambda_{lasso}\) for weighted networks!</li>
+		  <li class="probootstrap-check">Cross validation is time-consuming!</li>
+		  <li class="probootstrap-check">Bad statistical property: Biased estimation! </li>
+		  </ul>
+		</div>
+	  </div>
+	  
+	  <div class="col-md-6">
+		<div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+		  <span class="icon icon-lightbulb"></span>
+		  <h2>Variational Bayesian Regression (VBR)</h2>
+		  <p>\(y=X\mathbb{D}(a)w\)</p>
+		  		<ul class="probootstrap-list">
+		  <li class="probootstrap-check">Respectively estimate linkages and weights.</li>
+		  <li class="probootstrap-check">Full Bayesian inference.</li>
+		  <li class="probootstrap-check">No parameters need fine-tune.</li>
+		  <li class="probootstrap-check">An interpretable framework. </li>
+		  		</ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<section class="probootstrap-section probootstrap-bg-light" id="features" data-section="features">
+  <div class="container">
+  
+	<div class="row text-center mb100">
+	  <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+		<h2 class="mb30 text-black probootstrap-heading">Features</h2>
+		<p>VBR is an elegant framework for large-scale weighted complex networks reconstruction.</p>
+	  </div>
+	</div>
+	<!-- END row -->
+	
+	<div class="row mb100">
+	  <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+		<p><img src="img/img2.jpg" alt="" class="img-responsive probootstrap-shadow"></p>
+	  </div>
+	  <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+		<h3 class="text-primary probootstrap-heading-2">Accuracy</h3>
+		<p><p>
+		For a Barabasi-Albert network of 30 nodes and 30 time series samples, our method correctly identifies all edges. 
+		But lasso with 5-fold cross validation generates 2 false positive edges and 36 false negative edges.
+		</p></p>
+	  </div>
+	</div>
+	
+	<!-- END row -->
+	<div class="row mb100">
+	  <!-- <div class="col-md-8 col-md-pull-2"> -->
+	  <div class="col-md-8 col-md-push-5 probootstrap-animate">
+		<p><img src="img/img3.jpg" alt="" class="img-responsive probootstrap-shadow"></p>
+	  </div>
+	  <!-- <div class="col-md-4 col-md-pull-1"> -->
+	  <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
+		<h3 class="text-primary probootstrap-heading-2">Speed</h3>
+		<p><p>
+		VBR is extremely fast since it does not need cross validation. For a network with 1000+ nodes, lasso takes about 1 hour to 
+		acomplish the task. As for our method VBR, it consumes only less than 0.5 hour to recover the whole network.
+		</p></p>
+	  </div>
+	</div>
+	<!-- END row -->
+
+	<div class="row mb100">
+	  <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+		<p><img src="img/img4.jpg" alt="" class="img-responsive probootstrap-shadow"></p>
+	  </div>
+	  <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+		<h3 class="text-primary probootstrap-heading-2">Stock Market Network</h3>
+		<p><p>
+		We applied lasso and VBR to a stock network, which consists of 50 stocks from Shanghai Stock Exchange and Shenzhen Stock Exchange. 
+		It is found that the network recovered by VBR does a better job in terms of capturing the inter-coupled relationship among stocks.
+		</p></p>
+	  </div>
+	</div>
+	<!-- END row -->
+  </div>
+</section>
+<!-- END section -->
+
+
+
+<section class="probootstrap-section" data-section="pricing">
+  <div class="container">
+	<div class="row text-center mb100">
+	  <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+		<h2 class="mb30 text-black probootstrap-heading">Citation </h2>
+		
+		  <div class="col-md-12 col-sm-6 col-xs-12">
+			<div class="probootstrap-testimonial">
+			  <blockquote>
+				<p>                @article{xu2020variational, <br>   
+					author    = {Xu, Shuang and Zhang, Chunxia and Wang, Pei and Zhang, Jiangshe}, <br>
+					title     = {Variational Bayesian Weighted Complex Network Reconstruction}, <br>
+					journal   = {Information Sciences},<br>
+					volume    = {},<br>
+					number    = {},<br>
+					pages     = {},<br>
+					year      = {2020},<br>
+					month     = {}}.</p>
+			  </blockquote>
+			</div>
+		  </div>
+
+	  </div>
+	</div>
+	<!-- END row -->
+
+	</div>
+  </div>
+</section>
+<!-- END section -->
+
+
+
+
+<footer class="probootstrap-footer">
+  <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2020. Shuang Xu All rights reserved.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+              <ul class="nav nav-inline  justify-content-end ">
+
+                  <a class="nav-link active" href="https://xsxjtu.github.io/"> Home &nbsp; </a>
+                  <a class="nav-link" href="https://xsxjtu.github.io/publication.html"> Publication &nbsp; </a>
+                  <a class="nav-link" href="https://xsxjtu.github.io/projects.html"> Projects &nbsp; </a>
+                  <a class="nav-link" href="https://xsxjtu.github.io/code.html">Code </a>
+
+              </ul>
+            </div>
+          </div>
+	
+	
+  </div>
+</footer>
+
+
+
+<script src="js/scripts.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
